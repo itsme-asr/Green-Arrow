@@ -8,7 +8,7 @@ public class FireBalls : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            Destroy(other.gameObject, .3f);
+            Destroy(other.gameObject, .1f);
             Destroy(gameObject);
         }
     }
