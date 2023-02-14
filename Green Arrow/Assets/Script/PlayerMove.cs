@@ -7,6 +7,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private int playerSpeed = 7;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] Camera cam;
+    [SerializeField] public float playerHealth = 100f;
     private float inputAxisX;
     private float inputAxisY;
     private Vector2 movAxis;
