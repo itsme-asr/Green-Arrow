@@ -34,4 +34,9 @@ public class PlayerMove : MonoBehaviour
 
         rb.velocity = movAxis * playerSpeed;
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        playerHealth = playerHealth - 5;
+    }
 }
