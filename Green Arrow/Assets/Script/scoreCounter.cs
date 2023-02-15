@@ -5,15 +5,23 @@ using UnityEngine.UI;
 
 public class scoreCounter : MonoBehaviour
 {
-    public int point = 0;
-    [SerializeField] public Text textPoints;
-    [SerializeField] private AudioSource audioPoints;
+    //[SerializeField] public Text textPoints;
+    //[SerializeField] private AudioSource audioPoints;
 
-
-    public void updatePoints()
+    private int scorePoints;
+    public int ScorePoints
     {
-        //point++;
-        textPoints.text = " " + PlayerPrefs.GetInt("highscore");
-        Debug.Log("Score");
+        get
+        { return scorePoints; }
+        set
+        {
+            scorePoints = value;
+            GetComponent<Text>().text = " " + scorePoints;
+            PlayerPrefs.SetInt("highscore", scorePoints);
+        }
+    }
+    void Start()
+    {
+        ScorePoints = 0;
     }
 }
