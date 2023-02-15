@@ -8,6 +8,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] Camera cam;
     [SerializeField] public float playerHealth = 100f;
+    //[SerializeField] AudioSource healthAudio;
     private float inputAxisX;
     private float inputAxisY;
     private Vector2 movAxis;
@@ -38,5 +39,8 @@ public class PlayerMove : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         playerHealth = playerHealth - 5;
+
     }
+
+
 }
