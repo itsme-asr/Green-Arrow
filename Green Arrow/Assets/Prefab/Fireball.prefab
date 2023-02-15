@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 993699378667024227}
   - component: {fileID: 3871704241377617427}
   - component: {fileID: 4983670860881175416}
+  - component: {fileID: 4987091746826240567}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Untagged
@@ -155,4 +156,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathEffectprefab: {fileID: 5304374260923394926, guid: 59733f218382b7c408365aa7263e3487, type: 3}
-  enemyDeathSound: {fileID: 4689838095188010097, guid: f166ed5564b5b224fb44790f2d96d407, type: 3}
+--- !u!114 &4987091746826240567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993699378667024226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce897555d8705c241a4419f5be505a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textPoints: {fileID: 0}
+  audioPoints: {fileID: 0}

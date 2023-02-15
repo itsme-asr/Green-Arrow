@@ -17,7 +17,7 @@ public class AddHealth : MonoBehaviour
         {
 
             GameObject healthAddEffect = Instantiate(healthEffect, transform.position, Quaternion.identity);
-            player.playerHealth = player.playerHealth + 10f;
+            player.playerHealth = player.playerHealth + 45f;
             Destroy(healthAddEffect, .3f);
             Destroy(gameObject, .5f);
         }

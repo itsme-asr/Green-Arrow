@@ -10,6 +10,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] private Transform[] multiFirePoint;
     [SerializeField] private float fireBallSpeed = 10f;
     [SerializeField] AudioSource fireballWhoosh;
+    [SerializeField] AudioSource multiFfireballWhoosh;
 
     private void Update()
     {
@@ -21,6 +22,7 @@ public class Shooting : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
+            multiFfireballWhoosh.Play();
             specialSkill();
             //Debug.Log("Special Power");
         }
