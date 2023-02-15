@@ -8,7 +8,7 @@ public class FireBalls : MonoBehaviour
 
     [SerializeField] GameObject deathEffectprefab;
 
-    private int point = 0;
+
 
     private void Start()
     {
