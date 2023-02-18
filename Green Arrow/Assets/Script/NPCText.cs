@@ -11,7 +11,7 @@ public class NPCText : MonoBehaviour
     [SerializeField] string[] dialogue;
     private int index;
     [SerializeField] GameObject contButton;
-    [SerializeField] float wordSpeed = 0.9f;
+    [SerializeField] float wordSpeed = 0.01f;
     [SerializeField] bool playerIsClose;
     private void Start()
     {
@@ -36,7 +36,7 @@ public class NPCText : MonoBehaviour
 
         if (dialogueText.text == dialogue[index])
         {
-            //contButton.SetActive(true);
+            contButton.SetActive(true);
         }
 
     }
@@ -59,7 +59,7 @@ public class NPCText : MonoBehaviour
     public void nextLine()
     {
 
-        contButton.SetActive(false);
+        contButton.SetActive(true);
         if (index < dialogue.Length - 1)
         {
             index++;
