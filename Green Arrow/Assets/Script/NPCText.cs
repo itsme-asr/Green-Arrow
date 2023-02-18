@@ -11,7 +11,7 @@ public class NPCText : MonoBehaviour
     [SerializeField] string[] dialogue;
     private int index;
     [SerializeField] GameObject contButton;
-    [SerializeField] float wordSpeed;
+    [SerializeField] float wordSpeed = 0.9f;
     [SerializeField] bool playerIsClose;
     private void Start()
     {
@@ -30,12 +30,13 @@ public class NPCText : MonoBehaviour
             {
                 dialoguePanel.SetActive(true);
                 StartCoroutine(typing());
+                contButton.SetActive(true);
             }
         }
 
         if (dialogueText.text == dialogue[index])
         {
-            contButton.SetActive(true);
+            //contButton.SetActive(true);
         }
 
     }
@@ -52,7 +53,6 @@ public class NPCText : MonoBehaviour
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
-
         }
     }
 
@@ -75,16 +75,20 @@ public class NPCText : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.tag == "Player")
         {
+            mageKnight.GetComponent<Shooting>().enabled = false;
+            //mageKnight.GetComponent<PlayerMove>().enabled = false;
             playerIsClose = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.tag == "Player")
         {
+            mageKnight.GetComponent<Shooting>().enabled = true;
+            //mageKnight.GetComponent<PlayerMove>().enabled = true;
             playerIsClose = false;
             zeroText();
         }

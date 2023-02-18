@@ -206,6 +206,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &783998347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1815218870327873531, guid: c6478ae08ccb7f340b79253e124fc231, type: 3}
+  m_PrefabInstance: {fileID: 1582750113}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &786325462
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,6 +769,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1815218870327873505, guid: c6478ae08ccb7f340b79253e124fc231, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815218870327873505, guid: c6478ae08ccb7f340b79253e124fc231, type: 3}
       propertyPath: fireballWhoosh
       value: 
       objectReference: {fileID: 1644162066}
@@ -785,7 +794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1815218870327873533, guid: c6478ae08ccb7f340b79253e124fc231, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.79
       objectReference: {fileID: 0}
     - target: {fileID: 1815218870327873533, guid: c6478ae08ccb7f340b79253e124fc231, type: 3}
       propertyPath: m_LocalPosition.z
@@ -919,7 +928,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1735112887}
   - component: {fileID: 1735112886}
-  - component: {fileID: 1735112889}
   - component: {fileID: 1735112888}
   - component: {fileID: 1735112890}
   m_Layer: 0
@@ -1018,24 +1026,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.07, y: 1.12}
+  m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
---- !u!70 &1735112889
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1735112885}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.34, y: 1}
-  m_Direction: 0
 --- !u!114 &1735112890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1048,14 +1040,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02274d3e6e8d42b44b9e03976031a609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mageKnight: {fileID: 0}
+  mageKnight: {fileID: 783998347}
   dialoguePanel: {fileID: 1331606372}
   dialogueText: {fileID: 1359023722}
   dialogue:
   - O' The great Mage Knight!!!
   - Save us from the darkseeds!!
   contButton: {fileID: 1226536413}
-  wordSpeed: 0.1
+  wordSpeed: 0.0001
   playerIsClose: 0
 --- !u!1001 &1981701079
 PrefabInstance:
