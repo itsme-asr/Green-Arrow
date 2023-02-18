@@ -20,8 +20,5 @@ public class scoreCounter : MonoBehaviour
             PlayerPrefs.SetInt("highscore", scorePoints);
         }
     }
-    void Start()
-    {
-        ScorePoints = 0;
-    }
+
 }
